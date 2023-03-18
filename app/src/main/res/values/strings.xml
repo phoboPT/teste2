@@ -20,7 +20,7 @@
 
     <string name="fence_headphones_connect">Headphones connect</string>
     <string name="fence_headphones_disconnect">Headphones disconnect</string>
-    <string name="fence_user_idle">User nothing doing</string>
+    <string name="fence_user_idle">User doing nothing</string>
     <string name="fence_user_walking">User walking</string>
     <string name="fence_user_start_walking">User start walking</string>
     <string name="fence_user_stop_walking">User stop walking</string>

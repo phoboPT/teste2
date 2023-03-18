@@ -8,6 +8,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -82,6 +83,30 @@ class MainActivity : AppCompatActivity() {
         fenceClient.updateFences(
             FenceUpdateRequest.Builder()
                 .removeFence(USER_CAR).build()
+        )
+        fenceClient.updateFences(
+            FenceUpdateRequest.Builder()
+                .removeFence(PHONES_C).build()
+        )
+        fenceClient.updateFences(
+            FenceUpdateRequest.Builder()
+                .removeFence(PHONES_D).build()
+        )
+        fenceClient.updateFences(
+            FenceUpdateRequest.Builder()
+                .removeFence(USER_I).build()
+        )
+        fenceClient.updateFences(
+            FenceUpdateRequest.Builder()
+                .removeFence(USER_S).build()
+        )
+        fenceClient.updateFences(
+                FenceUpdateRequest.Builder()
+                    .removeFence(USER_W).build()
+                )
+        fenceClient.updateFences(
+            FenceUpdateRequest.Builder()
+                .removeFence(USER_S_W).build()
         )
         fenceLogTv.text = ""
         fenceLogTv.animate().alpha(0f).start()
@@ -319,7 +344,7 @@ class MainActivity : AppCompatActivity() {
 
         override fun onReceive(context: Context, intent: Intent) {
             val fenceState = FenceState.extract(intent)
-//            Log.d("key", fenceState.fenceKey)
+           Log.d("key", fenceState.fenceKey)
             if (fenceState.fenceKey == PHONES_C) {
                 when (fenceState.currentState) {
                     FenceState.TRUE -> {
